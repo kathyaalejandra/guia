@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View, StyleSheet } from 'react-native';
+import { Text, View, StyleSheet, Image } from 'react-native';
 
 export default function App() {
   return (
@@ -7,6 +7,11 @@ export default function App() {
       <View style={styles.box}>
         <Text style={styles.text}>¡Hola Mundo!</Text>
       </View>
+
+      <Image
+        source={require('../../assets/images/saludo.png')}
+        style={styles.image}
+      />
     </View>
   );
 }
@@ -15,11 +20,11 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#0000ff', // Fondo azul
+    alignItems: 'center', 
+    backgroundColor: '#aaf386', 
   },
   box: {
-    backgroundColor: '#000', // Fondo negro del rectángulo
+    backgroundColor: '#fcba50', // Fondo negro del rectángulo
     paddingVertical: 20,
     paddingHorizontal: 40,
     borderRadius: 10, // Bordes redondeados
@@ -32,6 +37,11 @@ const styles = StyleSheet.create({
   text: {
     fontSize: 24,
     fontWeight: 'bold',
-    color: '#fff', // Letras blancas
+    color: '#000', // Letras blancas
+  },
+  image: {
+    width: 100,  //ancho imagen
+    height: 100, //altura imagen
+    marginTop: 20,  // Espacio entre texto y imagen
   },
 });
